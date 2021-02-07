@@ -6,4 +6,16 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Page Remove="FrontEnd\App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Include="FrontEnd\App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="BackEnd\" />
+  </ItemGroup>
+
 </Project>
