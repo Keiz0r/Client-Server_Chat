@@ -20,18 +20,28 @@ namespace Client
   /// </summary>
   public partial class MainWindow : Window
   {
+    DebugInfo debugWindow;
+    TextBox username_txtbox;
     public MainWindow()
     {
       InitializeComponent();
+      debugWindow = Application.Current.Windows.OfType<DebugInfo>().FirstOrDefault();
+      username_txtbox = (TextBox)FindName("Name_TextBox");
     }
 
     private void Name_TextBox_TextChanged(object sender, TextChangedEventArgs e)
     {
 
     }
+
     private void Password_TextBox_TextChanged(object sender, TextChangedEventArgs e)
     {
 
+    }
+
+    private void Login_Button_Click(object sender, RoutedEventArgs e)
+    {
+      debugWindow.WriteDebugLine(username_txtbox.Text);
     }
   }
 }

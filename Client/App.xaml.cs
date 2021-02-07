@@ -13,5 +13,12 @@ namespace Client
   /// </summary>
   public partial class App : Application
   {
+    void App_Startup(object sender, StartupEventArgs e)
+    {
+      DebugInfo debugWindow = new DebugInfo();
+      debugWindow.Top = 100;
+      debugWindow.Left = 800;
+      debugWindow.Show();
+    }
   }
 }
