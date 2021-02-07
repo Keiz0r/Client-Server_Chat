@@ -19,10 +19,12 @@
       <RowDefinition Height="18*"/>
       <RowDefinition Height="23*"/>
     </Grid.RowDefinitions>
-    <TextBox x:Name="Name_TextBox" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" TextChanged="Name_TextBox_TextChanged"/>
+    <TextBox x:Name="Name_TextBox" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"
+             Text="{Binding Path=UserName, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Mode=OneWayToSource}"/>
     <TextBlock x:Name="Name_TextBlock" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,50" Grid.Row="1" Text="UserName" TextWrapping="Wrap" VerticalAlignment="Center"/>
-    <TextBox x:Name="Password_TextBox" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" TextChanged="Password_TextBox_TextChanged"/>
+    <TextBox x:Name="Password_TextBox" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"
+             Text="{Binding Path=Password, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Mode=OneWayToSource}"/>
     <TextBlock x:Name="Password_TextBlock" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,50" Grid.Row="2" Text="Password" TextWrapping="Wrap" VerticalAlignment="Center"/>
-    <Button x:Name="Login_Button" Content="Login" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="3" VerticalAlignment="Top" Click="Login_Button_Click"/>
+    <Button x:Name="Login_Button" Content="Login" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Top" Click="Login_Button_Click"/>
   </Grid>
 </Window>
