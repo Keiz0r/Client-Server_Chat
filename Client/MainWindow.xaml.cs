@@ -24,5 +24,14 @@ namespace Client
     {
       InitializeComponent();
     }
+
+    private void Name_TextBox_TextChanged(object sender, TextChangedEventArgs e)
+    {
+
+    }
+    private void Password_TextBox_TextChanged(object sender, TextChangedEventArgs e)
+    {
+
+    }
   }
 }
